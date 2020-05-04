@@ -14,6 +14,18 @@
 		C146A4C1245FD94100D69E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C146A4C0245FD94100D69E2B /* main.m */; };
 		C146A4CC245FD94100D69E2B /* decompressNanoLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C146A4CB245FD94100D69E2B /* decompressNanoLogTests.m */; };
 		C146A4D7245FD94100D69E2B /* decompressNanoLogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C146A4D6245FD94100D69E2B /* decompressNanoLogUITests.m */; };
+		C146A529245FDA3B00D69E2B /* GNUmakefile in Resources */ = {isa = PBXBuildFile; fileRef = C146A4FD245FDA3B00D69E2B /* GNUmakefile */; };
+		C146A52A245FDA3B00D69E2B /* PerfHelper.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A502245FDA3B00D69E2B /* PerfHelper.cc */; };
+		C146A52B245FDA3B00D69E2B /* RuntimeLogger.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A508245FDA3B00D69E2B /* RuntimeLogger.cc */; };
+		C146A52C245FDA3B00D69E2B /* Cycles.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A509245FDA3B00D69E2B /* Cycles.cc */; };
+		C146A52D245FDA3B00D69E2B /* NanoLog.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A50B245FDA3B00D69E2B /* NanoLog.cc */; };
+		C146A52E245FDA3B00D69E2B /* LogDecompressor.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A50C245FDA3B00D69E2B /* LogDecompressor.cc */; };
+		C146A530245FDA3B00D69E2B /* Util.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A50E245FDA3B00D69E2B /* Util.cc */; };
+		C146A531245FDA3B00D69E2B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C146A510245FDA3B00D69E2B /* .gitignore */; };
+		C146A532245FDA3B00D69E2B /* decompressor.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = C146A511245FDA3B00D69E2B /* decompressor.dSYM */; };
+		C146A535245FDA3B00D69E2B /* GeneratedCode.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A517245FDA3B00D69E2B /* GeneratedCode.cc */; };
+		C146A537245FDA3B00D69E2B /* TimeTrace.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A51B245FDA3B00D69E2B /* TimeTrace.cc */; };
+		C146A539245FDA3B00D69E2B /* Log.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146A520245FDA3B00D69E2B /* Log.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +62,35 @@
 		C146A4D2245FD94100D69E2B /* decompressNanoLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = decompressNanoLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C146A4D6245FD94100D69E2B /* decompressNanoLogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = decompressNanoLogUITests.m; sourceTree = "<group>"; };
 		C146A4D8245FD94100D69E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C146A4FD245FDA3B00D69E2B /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		C146A4FE245FDA3B00D69E2B /* runtime 2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "runtime 2.xcodeproj"; sourceTree = "<group>"; };
+		C146A502245FDA3B00D69E2B /* PerfHelper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PerfHelper.cc; sourceTree = "<group>"; };
+		C146A503245FDA3B00D69E2B /* NanoLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoLog.h; sourceTree = "<group>"; };
+		C146A504245FDA3B00D69E2B /* Fence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fence.h; sourceTree = "<group>"; };
+		C146A505245FDA3B00D69E2B /* NanoLogCpp17.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoLogCpp17.h; sourceTree = "<group>"; };
+		C146A506245FDA3B00D69E2B /* Packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packer.h; sourceTree = "<group>"; };
+		C146A507245FDA3B00D69E2B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		C146A508245FDA3B00D69E2B /* RuntimeLogger.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeLogger.cc; sourceTree = "<group>"; };
+		C146A509245FDA3B00D69E2B /* Cycles.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cycles.cc; sourceTree = "<group>"; };
+		C146A50A245FDA3B00D69E2B /* Cycles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cycles.h; sourceTree = "<group>"; };
+		C146A50B245FDA3B00D69E2B /* NanoLog.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLog.cc; sourceTree = "<group>"; };
+		C146A50C245FDA3B00D69E2B /* LogDecompressor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogDecompressor.cc; sourceTree = "<group>"; };
+		C146A50E245FDA3B00D69E2B /* Util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cc; sourceTree = "<group>"; };
+		C146A50F245FDA3B00D69E2B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C146A510245FDA3B00D69E2B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C146A511245FDA3B00D69E2B /* decompressor.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = decompressor.dSYM; sourceTree = "<group>"; };
+		C146A512245FDA3B00D69E2B /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		C146A514245FDA3B00D69E2B /* RuntimeLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeLogger.h; sourceTree = "<group>"; };
+		C146A517245FDA3B00D69E2B /* GeneratedCode.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeneratedCode.cc; sourceTree = "<group>"; };
+		C146A519245FDA3B00D69E2B /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		C146A51A245FDA3B00D69E2B /* Initialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Initialize.h; sourceTree = "<group>"; };
+		C146A51B245FDA3B00D69E2B /* TimeTrace.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeTrace.cc; sourceTree = "<group>"; };
+		C146A51E245FDA3B00D69E2B /* TimeTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTrace.h; sourceTree = "<group>"; };
+		C146A51F245FDA3B00D69E2B /* GeneratedCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedCode.h; sourceTree = "<group>"; };
+		C146A520245FDA3B00D69E2B /* Log.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cc; sourceTree = "<group>"; };
+		C146A521245FDA3B00D69E2B /* runtime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = runtime.xcodeproj; sourceTree = "<group>"; };
+		C146A524245FDA3B00D69E2B /* TestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
+		C146A525245FDA3B00D69E2B /* Atomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atomic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +141,7 @@
 		C146A4B3245FD94000D69E2B /* decompressNanoLog */ = {
 			isa = PBXGroup;
 			children = (
+				C146A4FB245FDA3B00D69E2B /* runtime */,
 				C146A4B4245FD94000D69E2B /* AppDelegate.h */,
 				C146A4B5245FD94000D69E2B /* AppDelegate.m */,
 				C146A4B7245FD94000D69E2B /* ViewController.h */,
@@ -129,6 +171,65 @@
 				C146A4D8245FD94100D69E2B /* Info.plist */,
 			);
 			path = decompressNanoLogUITests;
+			sourceTree = "<group>";
+		};
+		C146A4FB245FDA3B00D69E2B /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C146A4FD245FDA3B00D69E2B /* GNUmakefile */,
+				C146A4FE245FDA3B00D69E2B /* runtime 2.xcodeproj */,
+				C146A502245FDA3B00D69E2B /* PerfHelper.cc */,
+				C146A503245FDA3B00D69E2B /* NanoLog.h */,
+				C146A504245FDA3B00D69E2B /* Fence.h */,
+				C146A505245FDA3B00D69E2B /* NanoLogCpp17.h */,
+				C146A506245FDA3B00D69E2B /* Packer.h */,
+				C146A507245FDA3B00D69E2B /* Config.h */,
+				C146A508245FDA3B00D69E2B /* RuntimeLogger.cc */,
+				C146A509245FDA3B00D69E2B /* Cycles.cc */,
+				C146A50A245FDA3B00D69E2B /* Cycles.h */,
+				C146A50B245FDA3B00D69E2B /* NanoLog.cc */,
+				C146A50C245FDA3B00D69E2B /* LogDecompressor.cc */,
+				C146A50E245FDA3B00D69E2B /* Util.cc */,
+				C146A50F245FDA3B00D69E2B /* Common.h */,
+				C146A510245FDA3B00D69E2B /* .gitignore */,
+				C146A511245FDA3B00D69E2B /* decompressor.dSYM */,
+				C146A512245FDA3B00D69E2B /* Log.h */,
+				C146A514245FDA3B00D69E2B /* RuntimeLogger.h */,
+				C146A516245FDA3B00D69E2B /* testHelper */,
+				C146A519245FDA3B00D69E2B /* Util.h */,
+				C146A51A245FDA3B00D69E2B /* Initialize.h */,
+				C146A51B245FDA3B00D69E2B /* TimeTrace.cc */,
+				C146A51E245FDA3B00D69E2B /* TimeTrace.h */,
+				C146A51F245FDA3B00D69E2B /* GeneratedCode.h */,
+				C146A520245FDA3B00D69E2B /* Log.cc */,
+				C146A521245FDA3B00D69E2B /* runtime.xcodeproj */,
+				C146A524245FDA3B00D69E2B /* TestUtil.h */,
+				C146A525245FDA3B00D69E2B /* Atomic.h */,
+			);
+			name = runtime;
+			path = ../../runtime;
+			sourceTree = "<group>";
+		};
+		C146A4FF245FDA3B00D69E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C146A516245FDA3B00D69E2B /* testHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C146A517245FDA3B00D69E2B /* GeneratedCode.cc */,
+			);
+			path = testHelper;
+			sourceTree = "<group>";
+		};
+		C146A522245FDA3B00D69E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +321,16 @@
 			mainGroup = C146A4A8245FD94000D69E2B;
 			productRefGroup = C146A4B2245FD94000D69E2B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C146A4FF245FDA3B00D69E2B /* Products */;
+					ProjectRef = C146A4FE245FDA3B00D69E2B /* runtime 2.xcodeproj */;
+				},
+				{
+					ProductGroup = C146A522245FDA3B00D69E2B /* Products */;
+					ProjectRef = C146A521245FDA3B00D69E2B /* runtime.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C146A4B0245FD94000D69E2B /* decompressNanoLog */,
@@ -234,8 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C146A531245FDA3B00D69E2B /* .gitignore in Resources */,
 				C146A4BB245FD94100D69E2B /* Assets.xcassets in Resources */,
+				C146A529245FDA3B00D69E2B /* GNUmakefile in Resources */,
 				C146A4BE245FD94100D69E2B /* Main.storyboard in Resources */,
+				C146A532245FDA3B00D69E2B /* decompressor.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +374,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C146A52E245FDA3B00D69E2B /* LogDecompressor.cc in Sources */,
+				C146A530245FDA3B00D69E2B /* Util.cc in Sources */,
+				C146A52A245FDA3B00D69E2B /* PerfHelper.cc in Sources */,
+				C146A52B245FDA3B00D69E2B /* RuntimeLogger.cc in Sources */,
 				C146A4B9245FD94000D69E2B /* ViewController.m in Sources */,
+				C146A52D245FDA3B00D69E2B /* NanoLog.cc in Sources */,
+				C146A539245FDA3B00D69E2B /* Log.cc in Sources */,
+				C146A535245FDA3B00D69E2B /* GeneratedCode.cc in Sources */,
 				C146A4C1245FD94100D69E2B /* main.m in Sources */,
 				C146A4B6245FD94000D69E2B /* AppDelegate.m in Sources */,
+				C146A537245FDA3B00D69E2B /* TimeTrace.cc in Sources */,
+				C146A52C245FDA3B00D69E2B /* Cycles.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
