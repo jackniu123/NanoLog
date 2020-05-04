@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
 }
 
 void runBenchmark() {
-    const uint64_t RECORDS = 1000;
+    const uint64_t RECORDS = 10000000;
 
     std::chrono::high_resolution_clock::time_point start, stop;
     double time_span;
