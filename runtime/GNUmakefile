@@ -3,16 +3,16 @@ SRCS=Cycles.cc Util.cc testHelper/GeneratedCode.cc Log.cc NanoLog.cc RuntimeLogg
 OBJECTS:=$(SRCS:.cc=.o)
 
 # Test Specific Sources
-TESTS=LogTest.cc NanoLogTest.cc NanoLogCpp17Test.cc PackerTest.cc
+TESTS=
 TEST_OBJS=$(TESTS:.cc=.o)
 
 GTEST_DIR="../googletest/googletest"
 INCLUDES=-I. -ItestHelper -I${GTEST_DIR}/include
 LIBS=-L. -lgtest -lrt -pthread
 CXX_ARGS=-std=c++17 -g -O3
-CXX?=g++
+CXX?=g++-8
 
-all: test Perf decompressor libNanoLog.a
+all: decompressor libNanoLog.a
 
 %.o:%.cc %.h
 	$(CXX) $(CXX_ARGS) $(INCLUDES) -c $< -o $@
@@ -20,7 +20,7 @@ all: test Perf decompressor libNanoLog.a
 %.o:%.cc
 	$(CXX) $(CXX_ARGS) $(INCLUDES) -c $< -o $@
 
-$(TEST_OBJS): %.o:%.cc libgtest.a
+$(TEST_OBJS): %.o:%.cc 
 	$(CXX) $(CXX_ARGS) $(INCLUDES) $(LIBS) -c $< -o $@
 
 test: $(OBJECTS) $(TEST_OBJS) libgtest.a

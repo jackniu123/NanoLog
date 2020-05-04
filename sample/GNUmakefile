@@ -12,7 +12,7 @@
 
 # -DNDEBUG and -O3 should always be passed for high performance
 CXXFLAGS= -std=c++17 -DNDEBUG -O3 -g
-CXX=g++
+CXX=g++-8
 
 NANOLOG_RUNTIME_DIR=../runtime
 
@@ -24,7 +24,7 @@ all: sampleApplication decompressor
 
 # (b) Make the final application linking NanoLog, pthreads, and POSIX aio
 sampleApplication: main.o libNanoLog.a
-	$(CXX) $(CXXFLAGS) -o sampleApplication main.o -L. -lNanoLog -pthread -lrt
+	$(CXX) $(CXXFLAGS) -o sampleApplication main.o -L. -lNanoLog -pthread 
 
 clean:
 	@rm -f *.o sampleApplication /tmp/logFile compressedLog

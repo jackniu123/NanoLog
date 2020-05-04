@@ -149,178 +149,178 @@ void printHelp(const char *exe) {
  * Note that this executable must be compiled with the same BufferStuffer.h
  * as the LogCompressor that generated the compressedLog for this to work.
  */
-int main(int argc, char** argv) {
-    if (argc < 3) {
-        printHelp(argv[0]);
-        exit(1);
-    }
-
-    const char *command = argv[1];
-    const char *logFileName = argv[2];
-    bool find = false;
-    bool sorted = false;
-    bool doRCDF = false;
-    FILE *outputFd = NULL;
-    int filterId = -1;
-
-    if (strcmp(command, "decompress") == 0) {
-        outputFd = stdout;
-        sorted = true;
-    } else if (strcmp(command, "decompressUnordered") == 0) {
-        outputFd = stdout;
-    }  else if (strcmp(command, "rcdfTime") == 0) {
-        doRCDF = true;
-    } else if (strcmp(command, "minMaxMean") == 0) {
-        if (argc < 4) {
-            printHelp(argv[0]);
-            exit(1);
-        }
-
-        try {
-            filterId = std::stoi(argv[3]);
-        } catch (const std::invalid_argument& e) {
-            printf("Invalid logId, please enter a number: %s\r\n", argv[3]);
-            exit(-1);
-        } catch (const std::out_of_range& e) {
-            printf("The logId is too large: %s\r\n", argv[3]);
-            exit(-1);
-        }
-
-        if (filterId < 0) {
-            printf("The logId must be positive: %s\r\n", argv[3]);
-            exit(-1);
-        }
-    } else if (strcmp(command, "find") == 0) {
-        if (argc < 4) {
-            printHelp(argv[0]);
-            exit(1);
-        }
-
-        find = true;
-    } else {
-        printHelp(argv[0]);
-        exit(1);
-    }
-
-    Decoder decoder;
-    if(!decoder.open(logFileName)) {
-        printf("Unable to open file %s\r\n", logFileName);
-        exit(1);
-    }
-
-    if (find) {
-        printLogMetadataContainingSubstring(argv[3]);
-        return 0;
-    }
-
-    LogMessage args;
-    if (doRCDF) {
-        uint64_t start = PerfUtils::Cycles::rdtsc();
-        std::vector<uint64_t> interLogTimes;
-        interLogTimes.reserve(1000000000);
-        uint64_t stop = PerfUtils::Cycles::rdtsc();
-        double reserveTime = PerfUtils::Cycles::toSeconds(stop - start);
-
-        uint64_t lastTimestamp = 0;
-        start = PerfUtils::Cycles::rdtsc();
-        if (decoder.getNextLogStatement(args)) {
-            lastTimestamp = args.getTimestamp();
-            while (decoder.getNextLogStatement(args)) {
-                interLogTimes.push_back(args.getTimestamp() - lastTimestamp);
-                lastTimestamp = args.getTimestamp();
-            }
-        }
-        stop = PerfUtils::Cycles::rdtsc();
-        double decodeTime = PerfUtils::Cycles::toSeconds(stop - start);
-
-        start = PerfUtils::Cycles::rdtsc();
-        runRCDF(interLogTimes, PerfUtils::Cycles::getCyclesPerSec());
-        stop = PerfUtils::Cycles::rdtsc();
-        double rcdfTime = PerfUtils::Cycles::toSeconds(stop - start);
-
-        double totalTime = reserveTime + decodeTime + rcdfTime;
-        printf("# Took %0.2lf seconds to aggregate %lu time entries "
-               "(%0.2lf ns/event avg)\r\n",
-               totalTime, interLogTimes.size(),
-               1.0e9 * totalTime / double(interLogTimes.size()));
-
-        printf("# On average, thats..\r\n"
-               "#\t%0.2lf seconds allocate large vector (%0.2lf ns/event)\r\n"
-               "#\t%0.2lf seconds decompressing events (%0.2lf ns/event)\r\n"
-               "#\t%0.2lf seconds sorting/rcdf-ing (%0.2lf ns/event)\r\n",
-               reserveTime, 1.0e9 * reserveTime / double(interLogTimes.size()),
-               decodeTime, 1.0e9 * decodeTime / double(interLogTimes.size()),
-               rcdfTime, 1.0e9 * rcdfTime / double(interLogTimes.size()));
-        return 0;
-    }
-
-    if (sorted) {
-        int64_t numLogMsgs = decoder.decompressTo(outputFd);
-
-        if (outputFd)
-            fprintf(outputFd, "\r\n\r\n# Decompression Complete after printing "
-                              "%ld log messages\r\n", numLogMsgs);
-        return 0;
-    }
-
-    // Perform no aggregation but decompress unsorted.
-    if (filterId < 0) {
-        int64_t numLogMsgs = 0;
-        while(decoder.getNextLogStatement(args, outputFd))
-            ++numLogMsgs;
-
-        if (outputFd)
-            fprintf(outputFd, "\r\n\r\n# Decompression Complete after printing "
-                              "%ld log messages\r\n", numLogMsgs);
-        return 0;
-    }
-
-    // Perform unsorted aggregation
-    long total = 0;
-    long count = 0;
-    long max = 0;
-    long min = 0;
-    uint64_t numLogs = 0;
-    uint64_t start = PerfUtils::Cycles::rdtsc();
-    while(decoder.getNextLogStatement(args, nullptr)) {
-        ++numLogs;
-
-        if (static_cast<int>(args.getLogId()) != filterId)
-            continue;
-
-        int elem = args.get<int>(0);
-        if (count == 0)
-            max = min = elem;
-
-        if (max < elem)
-            max = elem;
-
-        if (min > elem)
-            min = elem;
-
-        total += elem;
-        ++count;
-    }
-
-    uint64_t stop = PerfUtils::Cycles::rdtsc();
-    double time = PerfUtils::Cycles::toSeconds(stop - start);
-
-    printf("Aggregating log message \"%s\" (logId=%d)\r\n",
-                GeneratedFunctions::logId2Metadata[filterId].fmtString,
-                filterId);
-    printf("Logs Encountered: %lu\r\n", numLogs);
-    printf("Matching Logs: %ld (%0.2lf%%)\r\n", count,
-            (100.0*(double)count)/(double)numLogs);
-    printf("Min: %ld\r\n", min);
-    printf("Max: %ld\r\n", max);
-    printf("Mean: %ld\r\n", total/count);
-    printf("Total: %ld\r\n", total);
-
-    printf("\r\nThe aggregation took %0.2lf seconds over "
-            "%ld elements (%0.2lf ns avg)\r\n",
-            time,
-            count, (1.0e9*time)/(double)count);
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//    if (argc < 3) {
+//        printHelp(argv[0]);
+//        exit(1);
+//    }
+//
+//    const char *command = argv[1];
+//    const char *logFileName = argv[2];
+//    bool find = false;
+//    bool sorted = false;
+//    bool doRCDF = false;
+//    FILE *outputFd = NULL;
+//    int filterId = -1;
+//
+//    if (strcmp(command, "decompress") == 0) {
+//        outputFd = stdout;
+//        sorted = true;
+//    } else if (strcmp(command, "decompressUnordered") == 0) {
+//        outputFd = stdout;
+//    }  else if (strcmp(command, "rcdfTime") == 0) {
+//        doRCDF = true;
+//    } else if (strcmp(command, "minMaxMean") == 0) {
+//        if (argc < 4) {
+//            printHelp(argv[0]);
+//            exit(1);
+//        }
+//
+//        try {
+//            filterId = std::stoi(argv[3]);
+//        } catch (const std::invalid_argument& e) {
+//            printf("Invalid logId, please enter a number: %s\r\n", argv[3]);
+//            exit(-1);
+//        } catch (const std::out_of_range& e) {
+//            printf("The logId is too large: %s\r\n", argv[3]);
+//            exit(-1);
+//        }
+//
+//        if (filterId < 0) {
+//            printf("The logId must be positive: %s\r\n", argv[3]);
+//            exit(-1);
+//        }
+//    } else if (strcmp(command, "find") == 0) {
+//        if (argc < 4) {
+//            printHelp(argv[0]);
+//            exit(1);
+//        }
+//
+//        find = true;
+//    } else {
+//        printHelp(argv[0]);
+//        exit(1);
+//    }
+//
+//    Decoder decoder;
+//    if(!decoder.open(logFileName)) {
+//        printf("Unable to open file %s\r\n", logFileName);
+//        exit(1);
+//    }
+//
+//    if (find) {
+//        printLogMetadataContainingSubstring(argv[3]);
+//        return 0;
+//    }
+//
+//    LogMessage args;
+//    if (doRCDF) {
+//        uint64_t start = PerfUtils::Cycles::rdtsc();
+//        std::vector<uint64_t> interLogTimes;
+//        interLogTimes.reserve(1000000000);
+//        uint64_t stop = PerfUtils::Cycles::rdtsc();
+//        double reserveTime = PerfUtils::Cycles::toSeconds(stop - start);
+//
+//        uint64_t lastTimestamp = 0;
+//        start = PerfUtils::Cycles::rdtsc();
+//        if (decoder.getNextLogStatement(args)) {
+//            lastTimestamp = args.getTimestamp();
+//            while (decoder.getNextLogStatement(args)) {
+//                interLogTimes.push_back(args.getTimestamp() - lastTimestamp);
+//                lastTimestamp = args.getTimestamp();
+//            }
+//        }
+//        stop = PerfUtils::Cycles::rdtsc();
+//        double decodeTime = PerfUtils::Cycles::toSeconds(stop - start);
+//
+//        start = PerfUtils::Cycles::rdtsc();
+//        runRCDF(interLogTimes, PerfUtils::Cycles::getCyclesPerSec());
+//        stop = PerfUtils::Cycles::rdtsc();
+//        double rcdfTime = PerfUtils::Cycles::toSeconds(stop - start);
+//
+//        double totalTime = reserveTime + decodeTime + rcdfTime;
+//        printf("# Took %0.2lf seconds to aggregate %lu time entries "
+//               "(%0.2lf ns/event avg)\r\n",
+//               totalTime, interLogTimes.size(),
+//               1.0e9 * totalTime / double(interLogTimes.size()));
+//
+//        printf("# On average, thats..\r\n"
+//               "#\t%0.2lf seconds allocate large vector (%0.2lf ns/event)\r\n"
+//               "#\t%0.2lf seconds decompressing events (%0.2lf ns/event)\r\n"
+//               "#\t%0.2lf seconds sorting/rcdf-ing (%0.2lf ns/event)\r\n",
+//               reserveTime, 1.0e9 * reserveTime / double(interLogTimes.size()),
+//               decodeTime, 1.0e9 * decodeTime / double(interLogTimes.size()),
+//               rcdfTime, 1.0e9 * rcdfTime / double(interLogTimes.size()));
+//        return 0;
+//    }
+//
+//    if (sorted) {
+//        int64_t numLogMsgs = decoder.decompressTo(outputFd);
+//
+//        if (outputFd)
+//            fprintf(outputFd, "\r\n\r\n# Decompression Complete after printing "
+//                              "%lld log messages\r\n", numLogMsgs);
+//        return 0;
+//    }
+//
+//    // Perform no aggregation but decompress unsorted.
+//    if (filterId < 0) {
+//        int64_t numLogMsgs = 0;
+//        while(decoder.getNextLogStatement(args, outputFd))
+//            ++numLogMsgs;
+//
+//        if (outputFd)
+//            fprintf(outputFd, "\r\n\r\n# Decompression Complete after printing "
+//                              "%lld log messages\r\n", numLogMsgs);
+//        return 0;
+//    }
+//
+//    // Perform unsorted aggregation
+//    long total = 0;
+//    long count = 0;
+//    long max = 0;
+//    long min = 0;
+//    uint64_t numLogs = 0;
+//    uint64_t start = PerfUtils::Cycles::rdtsc();
+//    while(decoder.getNextLogStatement(args, nullptr)) {
+//        ++numLogs;
+//
+//        if (static_cast<int>(args.getLogId()) != filterId)
+//            continue;
+//
+//        int elem = args.get<int>(0);
+//        if (count == 0)
+//            max = min = elem;
+//
+//        if (max < elem)
+//            max = elem;
+//
+//        if (min > elem)
+//            min = elem;
+//
+//        total += elem;
+//        ++count;
+//    }
+//
+//    uint64_t stop = PerfUtils::Cycles::rdtsc();
+//    double time = PerfUtils::Cycles::toSeconds(stop - start);
+//
+//    printf("Aggregating log message \"%s\" (logId=%d)\r\n",
+//                GeneratedFunctions::logId2Metadata[filterId].fmtString,
+//                filterId);
+//    printf("Logs Encountered: %llu\r\n", numLogs);
+//    printf("Matching Logs: %ld (%0.2lf%%)\r\n", count,
+//            (100.0*(double)count)/(double)numLogs);
+//    printf("Min: %ld\r\n", min);
+//    printf("Max: %ld\r\n", max);
+//    printf("Mean: %ld\r\n", total/count);
+//    printf("Total: %ld\r\n", total);
+//
+//    printf("\r\nThe aggregation took %0.2lf seconds over "
+//            "%ld elements (%0.2lf ns avg)\r\n",
+//            time,
+//            count, (1.0e9*time)/(double)count);
+//
+//    return 0;
+//}
 

@@ -1,0 +1,159 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		C1486AC1245EFAAA009701D2 /* aggregation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = aggregation; sourceTree = "<group>"; };
+		C1486AC2245EFAAA009701D2 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		C1486AC3245EFAAA009701D2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1486AC4245EFAAA009701D2 /* genConfig.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = genConfig.py; sourceTree = "<group>"; };
+		C1486AC5245EFAAA009701D2 /* run_preprocVsCpp17.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_preprocVsCpp17.sh; sourceTree = "<group>"; };
+		C1486AC6245EFAAA009701D2 /* run_sortedDecompressionThreads.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_sortedDecompressionThreads.sh; sourceTree = "<group>"; };
+		C1486AC7245EFAAA009701D2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C1486AC8245EFAAA009701D2 /* run_decompressionCosts.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_decompressionCosts.sh; sourceTree = "<group>"; };
+		C1486AC9245EFAAA009701D2 /* .depend_nanolog */ = {isa = PBXFileReference; lastKnownFileType = text; path = .depend_nanolog; sourceTree = "<group>"; };
+		C1486ACA245EFAAA009701D2 /* run_bench.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_bench.sh; sourceTree = "<group>"; };
+		C1486ACB245EFAAA009701D2 /* run_aggregation.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_aggregation.sh; sourceTree = "<group>"; };
+		C1486ACC245EFAAA009701D2 /* Benchmark.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Benchmark.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		C1486ABB245EFAAA009701D2 = {
+			isa = PBXGroup;
+			children = (
+				C1486AC1245EFAAA009701D2 /* aggregation */,
+				C1486AC2245EFAAA009701D2 /* GNUmakefile */,
+				C1486AC3245EFAAA009701D2 /* README.md */,
+				C1486AC4245EFAAA009701D2 /* genConfig.py */,
+				C1486AC5245EFAAA009701D2 /* run_preprocVsCpp17.sh */,
+				C1486AC6245EFAAA009701D2 /* run_sortedDecompressionThreads.sh */,
+				C1486AC7245EFAAA009701D2 /* .gitignore */,
+				C1486AC8245EFAAA009701D2 /* run_decompressionCosts.sh */,
+				C1486AC9245EFAAA009701D2 /* .depend_nanolog */,
+				C1486ACA245EFAAA009701D2 /* run_bench.sh */,
+				C1486ACB245EFAAA009701D2 /* run_aggregation.sh */,
+				C1486ACC245EFAAA009701D2 /* Benchmark.cc */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		C1486AC0245EFAAA009701D2 /* benchmarks */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = C1486ACD245EFAAA009701D2 /* Build configuration list for PBXLegacyTarget "benchmarks" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/jackniu/dev/NanoLog/benchmarks;
+			dependencies = (
+			);
+			name = benchmarks;
+			passBuildSettingsInEnvironment = 1;
+			productName = benchmarks;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		C1486ABC245EFAAA009701D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C1486ABF245EFAAA009701D2 /* Build configuration list for PBXProject "benchmarks" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1486ABB245EFAAA009701D2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1486AC0245EFAAA009701D2 /* benchmarks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		C1486ABD245EFAAA009701D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C1486ABE245EFAAA009701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		C1486ACE245EFAAA009701D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = benchmarks;
+			};
+			name = Debug;
+		};
+		C1486ACF245EFAAA009701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = benchmarks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1486ABF245EFAAA009701D2 /* Build configuration list for PBXProject "benchmarks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1486ABD245EFAAA009701D2 /* Debug */,
+				C1486ABE245EFAAA009701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1486ACD245EFAAA009701D2 /* Build configuration list for PBXLegacyTarget "benchmarks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1486ACE245EFAAA009701D2 /* Debug */,
+				C1486ACF245EFAAA009701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1486ABC245EFAAA009701D2 /* Project object */;
+}

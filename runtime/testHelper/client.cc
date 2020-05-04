@@ -13,7 +13,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include "NanoLog.h"
+#include "NanoLogCpp17.h"
 
 using namespace NanoLog::LogLevels;
 int main() {

@@ -25,7 +25,7 @@
 
 namespace NanoLogConfig {
     // Controls in what mode the compressed log file will be opened
-    static const int FILE_PARAMS = O_APPEND|O_RDWR|O_CREAT|O_NOATIME|O_DSYNC;
+    static const int FILE_PARAMS = O_APPEND|O_RDWR|O_CREAT|O_DSYNC;
 
     // Location of the initial log file
     static const char DEFAULT_LOG_FILE[] = "./compressedLog";

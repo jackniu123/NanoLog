@@ -26,6 +26,7 @@
 #include "Cycles.h"
 #include "Packer.h"
 #include "NanoLog.h"
+#include <array>
 
 /***
  * This file contains all the C++17 constexpr/templated magic that makes

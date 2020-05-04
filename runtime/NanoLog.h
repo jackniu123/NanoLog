@@ -23,7 +23,7 @@
  * the NanoLog Runtime system. This should be included where-ever the NANO_LOG
  * macro is used.
  */
-
+#undef DEBUG
 namespace NanoLog {
 
 // This extra namespace allows users to import only the LogLevel namespace

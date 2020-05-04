@@ -1,0 +1,199 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		C1486A1B245EFA09009701D2 /* NanoLogCpp17Test.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLogCpp17Test.cc; sourceTree = "<group>"; };
+		C1486A1C245EFA09009701D2 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		C1486A1D245EFA09009701D2 /* PerfHelper.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PerfHelper.cc; sourceTree = "<group>"; };
+		C1486A1E245EFA09009701D2 /* NanoLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NanoLog.h; sourceTree = "<group>"; };
+		C1486A1F245EFA09009701D2 /* Fence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fence.h; sourceTree = "<group>"; };
+		C1486A20245EFA09009701D2 /* NanoLogCpp17.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NanoLogCpp17.h; sourceTree = "<group>"; };
+		C1486A21245EFA09009701D2 /* Packer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Packer.h; sourceTree = "<group>"; };
+		C1486A22245EFA09009701D2 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		C1486A23245EFA09009701D2 /* RuntimeLogger.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeLogger.cc; sourceTree = "<group>"; };
+		C1486A24245EFA09009701D2 /* Cycles.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cycles.cc; sourceTree = "<group>"; };
+		C1486A25245EFA09009701D2 /* Cycles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cycles.h; sourceTree = "<group>"; };
+		C1486A26245EFA09009701D2 /* NanoLog.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLog.cc; sourceTree = "<group>"; };
+		C1486A27245EFA09009701D2 /* LogDecompressor.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogDecompressor.cc; sourceTree = "<group>"; };
+		C1486A28245EFA09009701D2 /* NanoLogTest.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLogTest.cc; sourceTree = "<group>"; };
+		C1486A29245EFA09009701D2 /* Util.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cc; sourceTree = "<group>"; };
+		C1486A2A245EFA09009701D2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C1486A2B245EFA09009701D2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C1486A2C245EFA09009701D2 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		C1486A2D245EFA09009701D2 /* PackerTest.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PackerTest.cc; sourceTree = "<group>"; };
+		C1486A2E245EFA09009701D2 /* RuntimeLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeLogger.h; sourceTree = "<group>"; };
+		C1486A2F245EFA09009701D2 /* LogTest.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogTest.cc; sourceTree = "<group>"; };
+		C1486A30245EFA09009701D2 /* testHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testHelper; sourceTree = "<group>"; };
+		C1486A31245EFA09009701D2 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		C1486A32245EFA09009701D2 /* Initialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initialize.h; sourceTree = "<group>"; };
+		C1486A33245EFA09009701D2 /* TimeTrace.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TimeTrace.cc; sourceTree = "<group>"; };
+		C1486A34245EFA09009701D2 /* PerfHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfHelper.h; sourceTree = "<group>"; };
+		C1486A35245EFA09009701D2 /* Perf.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Perf.cc; sourceTree = "<group>"; };
+		C1486A36245EFA09009701D2 /* TimeTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTrace.h; sourceTree = "<group>"; };
+		C1486A37245EFA09009701D2 /* GeneratedCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedCode.h; sourceTree = "<group>"; };
+		C1486A38245EFA09009701D2 /* Log.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cc; sourceTree = "<group>"; };
+		C1486A39245EFA09009701D2 /* TestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
+		C1486A3A245EFA09009701D2 /* Atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atomic.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		C1486A15245EFA09009701D2 = {
+			isa = PBXGroup;
+			children = (
+				C1486A1B245EFA09009701D2 /* NanoLogCpp17Test.cc */,
+				C1486A1C245EFA09009701D2 /* GNUmakefile */,
+				C1486A1D245EFA09009701D2 /* PerfHelper.cc */,
+				C1486A1E245EFA09009701D2 /* NanoLog.h */,
+				C1486A1F245EFA09009701D2 /* Fence.h */,
+				C1486A20245EFA09009701D2 /* NanoLogCpp17.h */,
+				C1486A21245EFA09009701D2 /* Packer.h */,
+				C1486A22245EFA09009701D2 /* Config.h */,
+				C1486A23245EFA09009701D2 /* RuntimeLogger.cc */,
+				C1486A24245EFA09009701D2 /* Cycles.cc */,
+				C1486A25245EFA09009701D2 /* Cycles.h */,
+				C1486A26245EFA09009701D2 /* NanoLog.cc */,
+				C1486A27245EFA09009701D2 /* LogDecompressor.cc */,
+				C1486A28245EFA09009701D2 /* NanoLogTest.cc */,
+				C1486A29245EFA09009701D2 /* Util.cc */,
+				C1486A2A245EFA09009701D2 /* Common.h */,
+				C1486A2B245EFA09009701D2 /* .gitignore */,
+				C1486A2C245EFA09009701D2 /* Log.h */,
+				C1486A2D245EFA09009701D2 /* PackerTest.cc */,
+				C1486A2E245EFA09009701D2 /* RuntimeLogger.h */,
+				C1486A2F245EFA09009701D2 /* LogTest.cc */,
+				C1486A30245EFA09009701D2 /* testHelper */,
+				C1486A31245EFA09009701D2 /* Util.h */,
+				C1486A32245EFA09009701D2 /* Initialize.h */,
+				C1486A33245EFA09009701D2 /* TimeTrace.cc */,
+				C1486A34245EFA09009701D2 /* PerfHelper.h */,
+				C1486A35245EFA09009701D2 /* Perf.cc */,
+				C1486A36245EFA09009701D2 /* TimeTrace.h */,
+				C1486A37245EFA09009701D2 /* GeneratedCode.h */,
+				C1486A38245EFA09009701D2 /* Log.cc */,
+				C1486A39245EFA09009701D2 /* TestUtil.h */,
+				C1486A3A245EFA09009701D2 /* Atomic.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		C1486A1A245EFA09009701D2 /* runtime */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = C1486A3B245EFA09009701D2 /* Build configuration list for PBXLegacyTarget "runtime" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/jackniu/dev/NanoLog/runtime;
+			dependencies = (
+			);
+			name = runtime;
+			passBuildSettingsInEnvironment = 1;
+			productName = runtime;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		C1486A16245EFA09009701D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C1486A19245EFA09009701D2 /* Build configuration list for PBXProject "runtime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1486A15245EFA09009701D2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1486A1A245EFA09009701D2 /* runtime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		C1486A17245EFA09009701D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C1486A18245EFA09009701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		C1486A3C245EFA09009701D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = runtime;
+			};
+			name = Debug;
+		};
+		C1486A3D245EFA09009701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = runtime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1486A19245EFA09009701D2 /* Build configuration list for PBXProject "runtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1486A17245EFA09009701D2 /* Debug */,
+				C1486A18245EFA09009701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1486A3B245EFA09009701D2 /* Build configuration list for PBXLegacyTarget "runtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1486A3C245EFA09009701D2 /* Debug */,
+				C1486A3D245EFA09009701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1486A16245EFA09009701D2 /* Project object */;
+}

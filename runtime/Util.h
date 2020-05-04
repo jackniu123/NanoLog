@@ -23,7 +23,7 @@
 #include <sys/syscall.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
-#include <asm/unistd.h>
+//#include <asm/unistd.h>
 #include <cstdio>
 #include <cstdlib>
 
@@ -78,7 +78,8 @@ static
 pid_t FORCE_INLINE
 gettid()
 {
-    return static_cast<pid_t>(syscall( __NR_gettid ));
+    return 0;
+    //return static_cast<pid_t>(syscall( __NR_gettid ));
 }
 
 /**
@@ -90,11 +91,12 @@ gettid()
  */
 static FORCE_INLINE
 void pinThreadToCore(int id) {
-    cpu_set_t cpuset;
+    return;
+    // cpu_set_t cpuset;
 
-    CPU_ZERO(&cpuset);
-        CPU_SET(id, &cpuset);
-        assert(sched_setaffinity(0, sizeof(cpuset), &cpuset) == 0);
+    // CPU_ZERO(&cpuset);
+    //     CPU_SET(id, &cpuset);
+    //     assert(sched_setaffinity(0, sizeof(cpuset), &cpuset) == 0);
 }
 
 /**
@@ -102,14 +104,14 @@ void pinThreadToCore(int id) {
  * cpu_set_t encodes information about which cores the current thread is
  * permitted to run on.
  */
-static FORCE_INLINE
-cpu_set_t getCpuAffinity() {
-    cpu_set_t cpuset;
+// static FORCE_INLINE
+// cpu_set_t getCpuAffinity() {
+//     cpu_set_t cpuset;
 
-    CPU_ZERO(&cpuset);
-    assert(sched_getaffinity(0, sizeof(cpuset), &cpuset) == 0);
-    return cpuset;
-}
+//     CPU_ZERO(&cpuset);
+//     assert(sched_getaffinity(0, sizeof(cpuset), &cpuset) == 0);
+//     return cpuset;
+// }
 
 /**
  * This function sets the allowable set of cores for the currently executing
@@ -120,10 +122,10 @@ cpu_set_t getCpuAffinity() {
  *      An object of type cpu_set_t which encodes the set of cores which
  *      current thread is permitted to run on.
  */
-static FORCE_INLINE
-void setCpuAffinity(cpu_set_t cpuset) {
-    assert(sched_setaffinity(0, sizeof(cpuset), &cpuset) == 0);
-}
+// static FORCE_INLINE
+// void setCpuAffinity(cpu_set_t cpuset) {
+//     assert(sched_setaffinity(0, sizeof(cpuset), &cpuset) == 0);
+// }
 
 /**
  * This function is used to seralize machine instructions so that no

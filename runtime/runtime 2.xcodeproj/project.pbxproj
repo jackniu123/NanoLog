@@ -1,0 +1,214 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		C1486A6A245EFA57009701D2 /* NanoLogCpp17Test.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLogCpp17Test.cc; sourceTree = "<group>"; };
+		C1486A6B245EFA57009701D2 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		C1486A6C245EFA57009701D2 /* PerfHelper.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PerfHelper.cc; sourceTree = "<group>"; };
+		C1486A6D245EFA57009701D2 /* NanoLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NanoLog.h; sourceTree = "<group>"; };
+		C1486A6E245EFA57009701D2 /* Fence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fence.h; sourceTree = "<group>"; };
+		C1486A6F245EFA57009701D2 /* NanoLogCpp17.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NanoLogCpp17.h; sourceTree = "<group>"; };
+		C1486A70245EFA57009701D2 /* Packer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Packer.h; sourceTree = "<group>"; };
+		C1486A71245EFA57009701D2 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		C1486A72245EFA57009701D2 /* RuntimeLogger.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeLogger.cc; sourceTree = "<group>"; };
+		C1486A73245EFA57009701D2 /* Cycles.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cycles.cc; sourceTree = "<group>"; };
+		C1486A74245EFA57009701D2 /* Cycles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cycles.h; sourceTree = "<group>"; };
+		C1486A75245EFA57009701D2 /* NanoLog.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLog.cc; sourceTree = "<group>"; };
+		C1486A76245EFA57009701D2 /* LogDecompressor.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogDecompressor.cc; sourceTree = "<group>"; };
+		C1486A77245EFA57009701D2 /* NanoLogTest.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLogTest.cc; sourceTree = "<group>"; };
+		C1486A78245EFA57009701D2 /* Util.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cc; sourceTree = "<group>"; };
+		C1486A79245EFA57009701D2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C1486A7A245EFA57009701D2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C1486A7B245EFA57009701D2 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		C1486A7C245EFA57009701D2 /* PackerTest.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PackerTest.cc; sourceTree = "<group>"; };
+		C1486A7D245EFA57009701D2 /* RuntimeLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeLogger.h; sourceTree = "<group>"; };
+		C1486A7E245EFA57009701D2 /* LogTest.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogTest.cc; sourceTree = "<group>"; };
+		C1486A7F245EFA57009701D2 /* testHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testHelper; sourceTree = "<group>"; };
+		C1486A80245EFA57009701D2 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		C1486A81245EFA57009701D2 /* Initialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initialize.h; sourceTree = "<group>"; };
+		C1486A82245EFA57009701D2 /* TimeTrace.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TimeTrace.cc; sourceTree = "<group>"; };
+		C1486A83245EFA57009701D2 /* PerfHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfHelper.h; sourceTree = "<group>"; };
+		C1486A84245EFA57009701D2 /* Perf.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Perf.cc; sourceTree = "<group>"; };
+		C1486A85245EFA57009701D2 /* TimeTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTrace.h; sourceTree = "<group>"; };
+		C1486A86245EFA57009701D2 /* GeneratedCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedCode.h; sourceTree = "<group>"; };
+		C1486A87245EFA57009701D2 /* Log.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cc; sourceTree = "<group>"; };
+		C1486A88245EFA57009701D2 /* runtime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = runtime.xcodeproj; sourceTree = "<group>"; };
+		C1486A8B245EFA57009701D2 /* TestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
+		C1486A8C245EFA57009701D2 /* Atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atomic.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		C1486A64245EFA57009701D2 = {
+			isa = PBXGroup;
+			children = (
+				C1486A6A245EFA57009701D2 /* NanoLogCpp17Test.cc */,
+				C1486A6B245EFA57009701D2 /* GNUmakefile */,
+				C1486A6C245EFA57009701D2 /* PerfHelper.cc */,
+				C1486A6D245EFA57009701D2 /* NanoLog.h */,
+				C1486A6E245EFA57009701D2 /* Fence.h */,
+				C1486A6F245EFA57009701D2 /* NanoLogCpp17.h */,
+				C1486A70245EFA57009701D2 /* Packer.h */,
+				C1486A71245EFA57009701D2 /* Config.h */,
+				C1486A72245EFA57009701D2 /* RuntimeLogger.cc */,
+				C1486A73245EFA57009701D2 /* Cycles.cc */,
+				C1486A74245EFA57009701D2 /* Cycles.h */,
+				C1486A75245EFA57009701D2 /* NanoLog.cc */,
+				C1486A76245EFA57009701D2 /* LogDecompressor.cc */,
+				C1486A77245EFA57009701D2 /* NanoLogTest.cc */,
+				C1486A78245EFA57009701D2 /* Util.cc */,
+				C1486A79245EFA57009701D2 /* Common.h */,
+				C1486A7A245EFA57009701D2 /* .gitignore */,
+				C1486A7B245EFA57009701D2 /* Log.h */,
+				C1486A7C245EFA57009701D2 /* PackerTest.cc */,
+				C1486A7D245EFA57009701D2 /* RuntimeLogger.h */,
+				C1486A7E245EFA57009701D2 /* LogTest.cc */,
+				C1486A7F245EFA57009701D2 /* testHelper */,
+				C1486A80245EFA57009701D2 /* Util.h */,
+				C1486A81245EFA57009701D2 /* Initialize.h */,
+				C1486A82245EFA57009701D2 /* TimeTrace.cc */,
+				C1486A83245EFA57009701D2 /* PerfHelper.h */,
+				C1486A84245EFA57009701D2 /* Perf.cc */,
+				C1486A85245EFA57009701D2 /* TimeTrace.h */,
+				C1486A86245EFA57009701D2 /* GeneratedCode.h */,
+				C1486A87245EFA57009701D2 /* Log.cc */,
+				C1486A88245EFA57009701D2 /* runtime.xcodeproj */,
+				C1486A8B245EFA57009701D2 /* TestUtil.h */,
+				C1486A8C245EFA57009701D2 /* Atomic.h */,
+			);
+			sourceTree = "<group>";
+		};
+		C1486A89245EFA57009701D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		C1486A69245EFA57009701D2 /* runtime */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = C1486A8E245EFA57009701D2 /* Build configuration list for PBXLegacyTarget "runtime" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/jackniu/dev/NanoLog/runtime;
+			dependencies = (
+			);
+			name = runtime;
+			passBuildSettingsInEnvironment = 1;
+			productName = runtime;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		C1486A65245EFA57009701D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C1486A68245EFA57009701D2 /* Build configuration list for PBXProject "runtime 2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1486A64245EFA57009701D2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C1486A89245EFA57009701D2 /* Products */;
+					ProjectRef = C1486A88245EFA57009701D2 /* runtime.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C1486A69245EFA57009701D2 /* runtime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		C1486A66245EFA57009701D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C1486A67245EFA57009701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		C1486A8F245EFA57009701D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = runtime;
+			};
+			name = Debug;
+		};
+		C1486A90245EFA57009701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = runtime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1486A68245EFA57009701D2 /* Build configuration list for PBXProject "runtime 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1486A66245EFA57009701D2 /* Debug */,
+				C1486A67245EFA57009701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1486A8E245EFA57009701D2 /* Build configuration list for PBXLegacyTarget "runtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1486A8F245EFA57009701D2 /* Debug */,
+				C1486A90245EFA57009701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1486A65245EFA57009701D2 /* Project object */;
+}

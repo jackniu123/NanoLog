@@ -142,7 +142,7 @@ RuntimeLogger::getStats() {
     char buffer[1024];
     // Leaks abstraction, but basically flush so we get all the time
     uint64_t start = PerfUtils::Cycles::rdtsc();
-    fdatasync(nanoLogSingleton.outputFd);
+    //fdatasync(nanoLogSingleton.outputFd);
     uint64_t stop = PerfUtils::Cycles::rdtsc();
     nanoLogSingleton.cyclesDiskIO_upperBound += (stop - start);
 
@@ -374,7 +374,7 @@ RuntimeLogger::compressionThreadMain() {
     // Each iteration of this loop scans for uncompressed log messages in the
     // thread buffers, compresses as much as possible, and outputs it to a file.
     while (!compressionThreadShouldExit) {
-        coreId = sched_getcpu();
+        //coreId = sched_getcpu();
 
         // Indicates how many bytes we have consumed from the StagingBuffers
         // in a single iteration of the while above. A value of 0 means we
@@ -569,7 +569,7 @@ RuntimeLogger::compressionThreadMain() {
         // buffer used for IO is now free. Pad the output (if necessary) and
         // output.
         ssize_t bytesToWrite = encoder.getEncodedBytes();
-        if (NanoLogConfig::FILE_PARAMS & O_DIRECT) {
+        if (false /*NanoLogConfig::FILE_PARAMS & O_DIRECT*/) {
             ssize_t bytesOver = bytesToWrite % 512;
 
             if (bytesOver != 0) {

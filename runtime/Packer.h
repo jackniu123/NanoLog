@@ -157,16 +157,16 @@ pack(char **buffer, int64_t val)
         return 8 + pack<uint64_t>(buffer, static_cast<uint64_t>(-val));
 }
 
-//TODO(syang0) we should measure the performance of doing it this way
-// vs taking both the negated and non-negated versions and encoding the smaller
-inline int
-pack(char **buffer, long long int val)
-{
-    if (val >= 0 || val <= int64_t(-(1LL<<56)))
-        return pack<uint64_t>(buffer, static_cast<uint64_t>(val));
-    else
-        return 8 + pack<uint64_t>(buffer, static_cast<uint64_t>(-val));
-}
+// //TODO(syang0) we should measure the performance of doing it this way
+// // vs taking both the negated and non-negated versions and encoding the smaller
+// inline int
+// pack(char **buffer, long long int val)
+// {
+//     if (val >= 0 || val <= int64_t(-(1LL<<56)))
+//         return pack<uint64_t>(buffer, static_cast<uint64_t>(val));
+//     else
+//         return 8 + pack<uint64_t>(buffer, static_cast<uint64_t>(-val));
+// }
 
 // The following pack functions that specialize on smaller signed types don't
 // make sense in the context of NanoLog since printf doesn't allow the

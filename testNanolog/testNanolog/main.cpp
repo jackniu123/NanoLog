@@ -33,7 +33,7 @@ using namespace NanoLog::LogLevels;
 int main(int argc, char** argv) {
     // Optional: Set the output location for the NanoLog system. By default
     // the log will be output to ./compressedLog
-    NanoLog::setLogFile("/tmp/logFile");
+    NanoLog::setLogFile("./logFile");
 
     // Optional optimization: pre-allocates thread-local data structures
     // needed by NanoLog. This can be invoked once per new
