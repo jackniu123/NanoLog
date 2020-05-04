@@ -5,7 +5,7 @@ test
 TTTest
 .depend
 
-testHelper/GeneratedCode.cc
+#testHelper/GeneratedCode.cc
 decompressor
 compressedLog
 nbproject
