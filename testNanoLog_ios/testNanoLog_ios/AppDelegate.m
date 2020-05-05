@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#define USE_OBIWAN
+#ifdef USE_OBIWAN
+#import "KMOLogConfig.h"
+#import "KMOLoggerManager.h"
+#endif
 
 @interface TDDObj : NSObject
 @end
@@ -26,10 +31,59 @@
 
 @implementation AppDelegate
 
+int     gettimeofday(struct timeval * __restrict, void * __restrict);
+long getCurrentTime()
+{
+   struct timeval tv;
+   gettimeofday(&tv,NULL);
+   return tv.tv_sec * 1000 + tv.tv_usec / 1000;
+}
+
+const long long ROUNDS = 10000;
+
+#if defined(USE_OBIWAN)
+- (void) runBenchMarkForObiwan
+{
+    long start = 0; long end = 0;
+    
+    NSString *sid = @"test";
+    KMOLogConfig *config = [KMOLogConfig alloc];
+    // config.enableTestEnvironment = kKSUEnableTest;
+    config.invalidTTY = true;
+    [KMOLoggerManager.sharedManager startSessionWithConfig:config];
+    DDLogVerbose(@"hello======");
+    start = getCurrentTime();
+    for (int i = 0; i < ROUNDS; i++)
+    {
+        DDLogError(@"hello======");
+    }
+    end = getCurrentTime();
+    NSLog(@"runBenchMarkForObiwan: run %lld rounds consume %ld ms\n", ROUNDS
+    , end - start);
+    
+    start = getCurrentTime();
+    for (int i = 0; i < ROUNDS*1000; i++)
+    {
+        void runBenchMarkWithCPluss();
+        runBenchMarkWithCPluss();
+        //DDLogVerbose(@"hello======");
+        //NANO_LOG(NOTICE, "on ios: Simple log message with 0 parameters");
+    }
+    end = getCurrentTime();
+    NSLog(@"runBenchMarkForNanoLog: run %lld rounds consume %ld ms\n", ROUNDS*1000
+    , end - start);
+}
+#endif
+
 int __sub_main_(int argc, char** argv);
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 // Override point for customization after application launch.
+#if !defined(USE_OBIWAN)
     __sub_main_(0, 0);
+#else
+    [self runBenchMarkForObiwan];
+#endif
+    
 return YES;
 }
 

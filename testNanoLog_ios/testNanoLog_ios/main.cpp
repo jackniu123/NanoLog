@@ -109,3 +109,7 @@ void runBenchmark() {
                 "%0.2lf secs\r\n", time_span);
 }
 
+extern "C" void runBenchMarkWithCPluss()
+{
+    NANO_LOG(NOTICE, "on ios: Simple log message with 0 parameters");
+}
