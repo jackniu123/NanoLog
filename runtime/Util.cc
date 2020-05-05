@@ -84,7 +84,7 @@ hexDump(const void *buf, uint64_t bytes)
         char hex[16][3];
         char ascii[17];
 
-        snprintf(offset, sizeof(offset), "%016lx", i);
+        snprintf(offset, sizeof(offset), "%016llx", i);
         offset[sizeof(offset) - 1] = '\0';
 
         for (j = 0; j < 16; j++) {

@@ -43,7 +43,7 @@ void
 Cycles::init() {
 #ifdef TARGET_OS_IPHONE
     return;
-#endif
+#else
     if (cyclesPerSec != 0)
         return;
 
@@ -93,6 +93,7 @@ Cycles::init() {
     exit:
         ;
     //printf("Cycles per second: %f\n", cyclesPerSec);
+#endif
 }
 
 /**
