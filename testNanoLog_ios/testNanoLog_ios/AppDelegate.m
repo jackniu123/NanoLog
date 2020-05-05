@@ -8,6 +8,18 @@
 
 #import "AppDelegate.h"
 
+@interface TDDObj : NSObject
+@end
+@implementation TDDObj
+
++ (void)load {
+    NSArray* tmpDirectory = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:NSTemporaryDirectory() error:NULL];
+    for (NSString *file in tmpDirectory) {
+        [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), file] error:NULL];
+    }
+}
+@end
+
 @interface AppDelegate ()
 
 @end

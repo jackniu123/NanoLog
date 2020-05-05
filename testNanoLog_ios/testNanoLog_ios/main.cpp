@@ -81,14 +81,14 @@ extern "C" int __sub_main_(int argc, char** argv) {
 }
 
 void runBenchmark() {
-    const uint64_t RECORDS = 80000000;
+    const uint64_t RECORDS = 800;
 
     std::chrono::high_resolution_clock::time_point start, stop;
     double time_span;
 
     start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < RECORDS; ++i) {
-        NANO_LOG(NOTICE, "Simple log message with 0 parameters");
+        NANO_LOG(NOTICE, "on ios: Simple log message with 0 parameters");
     }
     stop = std::chrono::high_resolution_clock::now();
 
