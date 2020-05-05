@@ -72,6 +72,9 @@ class Atomic {
      */
     void add(int64_t increment)
     {
+    #ifdef TARGET_OS_IPHONE
+        value += increment;
+    #else
         if (sizeof(value) == 8) {
             __asm__ __volatile__("lock; addq %1,%0" : "=m" (value) :
                     "r" (increment*AtomicStride<ValueType>::unitSize));
@@ -80,6 +83,7 @@ class Atomic {
                     "r" (static_cast<int>(increment)*
                          AtomicStride<ValueType>::unitSize));
         }
+    #endif
     }
 
     /**
@@ -95,6 +99,9 @@ class Atomic {
      */
     ValueType compareExchange(ValueType test, ValueType newValue)
     {
+    #ifdef TARGET_OS_IPHONE
+        return test;
+    #else
         if (sizeof(value) == 8) {
             __asm__ __volatile__("lock; cmpxchgq %0,%1" : "=r" (newValue),
                     "=m" (value), "=a" (test) : "0" (newValue), "2" (test));
@@ -103,6 +110,7 @@ class Atomic {
                     "=m" (value), "=a" (test) : "0" (newValue), "2" (test));
         }
         return test;
+    #endif
     }
 
     /**

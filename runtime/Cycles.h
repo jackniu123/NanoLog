@@ -38,6 +38,9 @@ class Cycles {
     uint64_t
     rdtsc()
     {
+    #ifdef TARGET_OS_IPHONE
+        return 0;
+    #else
 #if TESTING
         if (mockTscValue)
             return mockTscValue;
@@ -46,6 +49,7 @@ class Cycles {
         __asm__ __volatile__("rdtsc" : "=a" (lo), "=d" (hi));
 //        __asm__ __volatile__("rdtscp" : "=a" (lo), "=d" (hi) : : "%rcx");
         return (((uint64_t)hi << 32) | lo);
+    #endif
     }
 
     static __inline __attribute__((always_inline))

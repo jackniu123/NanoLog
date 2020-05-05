@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C146ACBA2460107C00D69E2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C146ACB92460107C00D69E2B /* AppDelegate.m */; };
+		C146ACBD2460107C00D69E2B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C146ACBC2460107C00D69E2B /* SceneDelegate.m */; };
+		C146ACC02460107C00D69E2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C146ACBF2460107C00D69E2B /* ViewController.m */; };
+		C146ACC32460107C00D69E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C146ACC12460107C00D69E2B /* Main.storyboard */; };
+		C146ACC52460108800D69E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C146ACC42460108800D69E2B /* Assets.xcassets */; };
+		C146ACC82460108800D69E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C146ACC62460108800D69E2B /* LaunchScreen.storyboard */; };
+		C146ACCB2460108800D69E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C146ACCA2460108800D69E2B /* main.m */; };
+		C146ACD52460108900D69E2B /* testNanoLog_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C146ACD42460108900D69E2B /* testNanoLog_iosTests.m */; };
+		C146ACE02460108900D69E2B /* testNanoLog_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C146ACDF2460108900D69E2B /* testNanoLog_iosUITests.m */; };
+		C146AD31246011AF00D69E2B /* GNUmakefile in Resources */ = {isa = PBXBuildFile; fileRef = C146AD06246011AF00D69E2B /* GNUmakefile */; };
+		C146AD33246011AF00D69E2B /* RuntimeLogger.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD10246011AF00D69E2B /* RuntimeLogger.cc */; };
+		C146AD34246011AF00D69E2B /* Cycles.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD11246011AF00D69E2B /* Cycles.cc */; };
+		C146AD35246011AF00D69E2B /* NanoLog.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD13246011AF00D69E2B /* NanoLog.cc */; };
+		C146AD38246011AF00D69E2B /* Util.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD16246011AF00D69E2B /* Util.cc */; };
+		C146AD39246011AF00D69E2B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C146AD18246011AF00D69E2B /* .gitignore */; };
+		C146AD3A246011AF00D69E2B /* decompressor.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = C146AD19246011AF00D69E2B /* decompressor.dSYM */; };
+		C146AD3D246011AF00D69E2B /* GeneratedCode.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD1F246011AF00D69E2B /* GeneratedCode.cc */; };
+		C146AD3F246011AF00D69E2B /* TimeTrace.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD23246011AF00D69E2B /* TimeTrace.cc */; };
+		C146AD41246011AF00D69E2B /* Log.cc in Sources */ = {isa = PBXBuildFile; fileRef = C146AD28246011AF00D69E2B /* Log.cc */; };
+		C1F71F7924601A0B002BD164 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F71F7824601A0B002BD164 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C146ACD12460108900D69E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C146ACAD2460107C00D69E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C146ACB42460107C00D69E2B;
+			remoteInfo = testNanoLog_ios;
+		};
+		C146ACDC2460108900D69E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C146ACAD2460107C00D69E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C146ACB42460107C00D69E2B;
+			remoteInfo = testNanoLog_ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C146ACB52460107C00D69E2B /* testNanoLog_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testNanoLog_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C146ACB82460107C00D69E2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C146ACB92460107C00D69E2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C146ACBB2460107C00D69E2B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C146ACBC2460107C00D69E2B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C146ACBE2460107C00D69E2B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C146ACBF2460107C00D69E2B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C146ACC22460107C00D69E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C146ACC42460108800D69E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C146ACC72460108800D69E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C146ACC92460108800D69E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C146ACCA2460108800D69E2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C146ACD02460108900D69E2B /* testNanoLog_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testNanoLog_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C146ACD42460108900D69E2B /* testNanoLog_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testNanoLog_iosTests.m; sourceTree = "<group>"; };
+		C146ACD62460108900D69E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C146ACDB2460108900D69E2B /* testNanoLog_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testNanoLog_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C146ACDF2460108900D69E2B /* testNanoLog_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testNanoLog_iosUITests.m; sourceTree = "<group>"; };
+		C146ACE12460108900D69E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C146AD06246011AF00D69E2B /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		C146AD07246011AF00D69E2B /* runtime 2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "runtime 2.xcodeproj"; sourceTree = "<group>"; };
+		C146AD0B246011AF00D69E2B /* NanoLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoLog.h; sourceTree = "<group>"; };
+		C146AD0C246011AF00D69E2B /* Fence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fence.h; sourceTree = "<group>"; };
+		C146AD0D246011AF00D69E2B /* NanoLogCpp17.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoLogCpp17.h; sourceTree = "<group>"; };
+		C146AD0E246011AF00D69E2B /* Packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packer.h; sourceTree = "<group>"; };
+		C146AD0F246011AF00D69E2B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		C146AD10246011AF00D69E2B /* RuntimeLogger.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeLogger.cc; sourceTree = "<group>"; };
+		C146AD11246011AF00D69E2B /* Cycles.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cycles.cc; sourceTree = "<group>"; };
+		C146AD12246011AF00D69E2B /* Cycles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cycles.h; sourceTree = "<group>"; };
+		C146AD13246011AF00D69E2B /* NanoLog.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NanoLog.cc; sourceTree = "<group>"; };
+		C146AD16246011AF00D69E2B /* Util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cc; sourceTree = "<group>"; };
+		C146AD17246011AF00D69E2B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C146AD18246011AF00D69E2B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C146AD19246011AF00D69E2B /* decompressor.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = decompressor.dSYM; sourceTree = "<group>"; };
+		C146AD1A246011AF00D69E2B /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		C146AD1C246011AF00D69E2B /* RuntimeLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeLogger.h; sourceTree = "<group>"; };
+		C146AD1F246011AF00D69E2B /* GeneratedCode.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeneratedCode.cc; sourceTree = "<group>"; };
+		C146AD21246011AF00D69E2B /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		C146AD22246011AF00D69E2B /* Initialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Initialize.h; sourceTree = "<group>"; };
+		C146AD23246011AF00D69E2B /* TimeTrace.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeTrace.cc; sourceTree = "<group>"; };
+		C146AD26246011AF00D69E2B /* TimeTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTrace.h; sourceTree = "<group>"; };
+		C146AD27246011AF00D69E2B /* GeneratedCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedCode.h; sourceTree = "<group>"; };
+		C146AD28246011AF00D69E2B /* Log.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cc; sourceTree = "<group>"; };
+		C146AD29246011AF00D69E2B /* runtime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = runtime.xcodeproj; sourceTree = "<group>"; };
+		C146AD2C246011AF00D69E2B /* TestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
+		C146AD2D246011AF00D69E2B /* Atomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atomic.h; sourceTree = "<group>"; };
+		C1F71F7824601A0B002BD164 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C146ACB22460107C00D69E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C146ACCD2460108900D69E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C146ACD82460108900D69E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C146ACAC2460107C00D69E2B = {
+			isa = PBXGroup;
+			children = (
+				C146ACB72460107C00D69E2B /* testNanoLog_ios */,
+				C146ACD32460108900D69E2B /* testNanoLog_iosTests */,
+				C146ACDE2460108900D69E2B /* testNanoLog_iosUITests */,
+				C146ACB62460107C00D69E2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C146ACB62460107C00D69E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C146ACB52460107C00D69E2B /* testNanoLog_ios.app */,
+				C146ACD02460108900D69E2B /* testNanoLog_iosTests.xctest */,
+				C146ACDB2460108900D69E2B /* testNanoLog_iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C146ACB72460107C00D69E2B /* testNanoLog_ios */ = {
+			isa = PBXGroup;
+			children = (
+				C146AD04246011AF00D69E2B /* runtime */,
+				C146ACB82460107C00D69E2B /* AppDelegate.h */,
+				C146ACB92460107C00D69E2B /* AppDelegate.m */,
+				C146ACBB2460107C00D69E2B /* SceneDelegate.h */,
+				C146ACBC2460107C00D69E2B /* SceneDelegate.m */,
+				C146ACBE2460107C00D69E2B /* ViewController.h */,
+				C146ACBF2460107C00D69E2B /* ViewController.m */,
+				C146ACC12460107C00D69E2B /* Main.storyboard */,
+				C146ACC42460108800D69E2B /* Assets.xcassets */,
+				C146ACC62460108800D69E2B /* LaunchScreen.storyboard */,
+				C146ACC92460108800D69E2B /* Info.plist */,
+				C1F71F7824601A0B002BD164 /* main.cpp */,
+				C146ACCA2460108800D69E2B /* main.m */,
+			);
+			path = testNanoLog_ios;
+			sourceTree = "<group>";
+		};
+		C146ACD32460108900D69E2B /* testNanoLog_iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				C146ACD42460108900D69E2B /* testNanoLog_iosTests.m */,
+				C146ACD62460108900D69E2B /* Info.plist */,
+			);
+			path = testNanoLog_iosTests;
+			sourceTree = "<group>";
+		};
+		C146ACDE2460108900D69E2B /* testNanoLog_iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C146ACDF2460108900D69E2B /* testNanoLog_iosUITests.m */,
+				C146ACE12460108900D69E2B /* Info.plist */,
+			);
+			path = testNanoLog_iosUITests;
+			sourceTree = "<group>";
+		};
+		C146AD04246011AF00D69E2B /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C146AD06246011AF00D69E2B /* GNUmakefile */,
+				C146AD07246011AF00D69E2B /* runtime 2.xcodeproj */,
+				C146AD0B246011AF00D69E2B /* NanoLog.h */,
+				C146AD0C246011AF00D69E2B /* Fence.h */,
+				C146AD0D246011AF00D69E2B /* NanoLogCpp17.h */,
+				C146AD0E246011AF00D69E2B /* Packer.h */,
+				C146AD0F246011AF00D69E2B /* Config.h */,
+				C146AD10246011AF00D69E2B /* RuntimeLogger.cc */,
+				C146AD11246011AF00D69E2B /* Cycles.cc */,
+				C146AD12246011AF00D69E2B /* Cycles.h */,
+				C146AD13246011AF00D69E2B /* NanoLog.cc */,
+				C146AD16246011AF00D69E2B /* Util.cc */,
+				C146AD17246011AF00D69E2B /* Common.h */,
+				C146AD18246011AF00D69E2B /* .gitignore */,
+				C146AD19246011AF00D69E2B /* decompressor.dSYM */,
+				C146AD1A246011AF00D69E2B /* Log.h */,
+				C146AD1C246011AF00D69E2B /* RuntimeLogger.h */,
+				C146AD1E246011AF00D69E2B /* testHelper */,
+				C146AD21246011AF00D69E2B /* Util.h */,
+				C146AD22246011AF00D69E2B /* Initialize.h */,
+				C146AD23246011AF00D69E2B /* TimeTrace.cc */,
+				C146AD26246011AF00D69E2B /* TimeTrace.h */,
+				C146AD27246011AF00D69E2B /* GeneratedCode.h */,
+				C146AD28246011AF00D69E2B /* Log.cc */,
+				C146AD29246011AF00D69E2B /* runtime.xcodeproj */,
+				C146AD2C246011AF00D69E2B /* TestUtil.h */,
+				C146AD2D246011AF00D69E2B /* Atomic.h */,
+			);
+			name = runtime;
+			path = ../../runtime;
+			sourceTree = "<group>";
+		};
+		C146AD08246011AF00D69E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C146AD1E246011AF00D69E2B /* testHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C146AD1F246011AF00D69E2B /* GeneratedCode.cc */,
+			);
+			path = testHelper;
+			sourceTree = "<group>";
+		};
+		C146AD2A246011AF00D69E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C146ACB42460107C00D69E2B /* testNanoLog_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C146ACE42460108900D69E2B /* Build configuration list for PBXNativeTarget "testNanoLog_ios" */;
+			buildPhases = (
+				C146ACB12460107C00D69E2B /* Sources */,
+				C146ACB22460107C00D69E2B /* Frameworks */,
+				C146ACB32460107C00D69E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testNanoLog_ios;
+			productName = testNanoLog_ios;
+			productReference = C146ACB52460107C00D69E2B /* testNanoLog_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C146ACCF2460108900D69E2B /* testNanoLog_iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C146ACE72460108900D69E2B /* Build configuration list for PBXNativeTarget "testNanoLog_iosTests" */;
+			buildPhases = (
+				C146ACCC2460108900D69E2B /* Sources */,
+				C146ACCD2460108900D69E2B /* Frameworks */,
+				C146ACCE2460108900D69E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C146ACD22460108900D69E2B /* PBXTargetDependency */,
+			);
+			name = testNanoLog_iosTests;
+			productName = testNanoLog_iosTests;
+			productReference = C146ACD02460108900D69E2B /* testNanoLog_iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C146ACDA2460108900D69E2B /* testNanoLog_iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C146ACEA2460108900D69E2B /* Build configuration list for PBXNativeTarget "testNanoLog_iosUITests" */;
+			buildPhases = (
+				C146ACD72460108900D69E2B /* Sources */,
+				C146ACD82460108900D69E2B /* Frameworks */,
+				C146ACD92460108900D69E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C146ACDD2460108900D69E2B /* PBXTargetDependency */,
+			);
+			name = testNanoLog_iosUITests;
+			productName = testNanoLog_iosUITests;
+			productReference = C146ACDB2460108900D69E2B /* testNanoLog_iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C146ACAD2460107C00D69E2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = kuaishou;
+				TargetAttributes = {
+					C146ACB42460107C00D69E2B = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					C146ACCF2460108900D69E2B = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = C146ACB42460107C00D69E2B;
+					};
+					C146ACDA2460108900D69E2B = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = C146ACB42460107C00D69E2B;
+					};
+				};
+			};
+			buildConfigurationList = C146ACB02460107C00D69E2B /* Build configuration list for PBXProject "testNanoLog_ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C146ACAC2460107C00D69E2B;
+			productRefGroup = C146ACB62460107C00D69E2B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C146AD08246011AF00D69E2B /* Products */;
+					ProjectRef = C146AD07246011AF00D69E2B /* runtime 2.xcodeproj */;
+				},
+				{
+					ProductGroup = C146AD2A246011AF00D69E2B /* Products */;
+					ProjectRef = C146AD29246011AF00D69E2B /* runtime.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C146ACB42460107C00D69E2B /* testNanoLog_ios */,
+				C146ACCF2460108900D69E2B /* testNanoLog_iosTests */,
+				C146ACDA2460108900D69E2B /* testNanoLog_iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C146ACB32460107C00D69E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C146AD39246011AF00D69E2B /* .gitignore in Resources */,
+				C146ACC82460108800D69E2B /* LaunchScreen.storyboard in Resources */,
+				C146ACC52460108800D69E2B /* Assets.xcassets in Resources */,
+				C146ACC32460107C00D69E2B /* Main.storyboard in Resources */,
+				C146AD3A246011AF00D69E2B /* decompressor.dSYM in Resources */,
+				C146AD31246011AF00D69E2B /* GNUmakefile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C146ACCE2460108900D69E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C146ACD92460108900D69E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C146ACB12460107C00D69E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C146AD34246011AF00D69E2B /* Cycles.cc in Sources */,
+				C146ACC02460107C00D69E2B /* ViewController.m in Sources */,
+				C146ACBA2460107C00D69E2B /* AppDelegate.m in Sources */,
+				C146AD41246011AF00D69E2B /* Log.cc in Sources */,
+				C146AD3F246011AF00D69E2B /* TimeTrace.cc in Sources */,
+				C146AD35246011AF00D69E2B /* NanoLog.cc in Sources */,
+				C146AD33246011AF00D69E2B /* RuntimeLogger.cc in Sources */,
+				C146ACCB2460108800D69E2B /* main.m in Sources */,
+				C146AD38246011AF00D69E2B /* Util.cc in Sources */,
+				C1F71F7924601A0B002BD164 /* main.cpp in Sources */,
+				C146ACBD2460107C00D69E2B /* SceneDelegate.m in Sources */,
+				C146AD3D246011AF00D69E2B /* GeneratedCode.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C146ACCC2460108900D69E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C146ACD52460108900D69E2B /* testNanoLog_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C146ACD72460108900D69E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C146ACE02460108900D69E2B /* testNanoLog_iosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C146ACD22460108900D69E2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C146ACB42460107C00D69E2B /* testNanoLog_ios */;
+			targetProxy = C146ACD12460108900D69E2B /* PBXContainerItemProxy */;
+		};
+		C146ACDD2460108900D69E2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C146ACB42460107C00D69E2B /* testNanoLog_ios */;
+			targetProxy = C146ACDC2460108900D69E2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C146ACC12460107C00D69E2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C146ACC22460107C00D69E2B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C146ACC62460108800D69E2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C146ACC72460108800D69E2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C146ACE22460108900D69E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C146ACE32460108900D69E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C146ACE52460108900D69E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B499T9AXJ6;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OS_IPHONE;
+				INFOPLIST_FILE = testNanoLog_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kuaishou.testNanoLog-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C146ACE62460108900D69E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B499T9AXJ6;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OS_IPHONE;
+				INFOPLIST_FILE = testNanoLog_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kuaishou.testNanoLog-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C146ACE82460108900D69E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B499T9AXJ6;
+				INFOPLIST_FILE = testNanoLog_iosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kuaishou.testNanoLog-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testNanoLog_ios.app/testNanoLog_ios";
+			};
+			name = Debug;
+		};
+		C146ACE92460108900D69E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B499T9AXJ6;
+				INFOPLIST_FILE = testNanoLog_iosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kuaishou.testNanoLog-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testNanoLog_ios.app/testNanoLog_ios";
+			};
+			name = Release;
+		};
+		C146ACEB2460108900D69E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B499T9AXJ6;
+				INFOPLIST_FILE = testNanoLog_iosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kuaishou.testNanoLog-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = testNanoLog_ios;
+			};
+			name = Debug;
+		};
+		C146ACEC2460108900D69E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B499T9AXJ6;
+				INFOPLIST_FILE = testNanoLog_iosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kuaishou.testNanoLog-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = testNanoLog_ios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C146ACB02460107C00D69E2B /* Build configuration list for PBXProject "testNanoLog_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C146ACE22460108900D69E2B /* Debug */,
+				C146ACE32460108900D69E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C146ACE42460108900D69E2B /* Build configuration list for PBXNativeTarget "testNanoLog_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C146ACE52460108900D69E2B /* Debug */,
+				C146ACE62460108900D69E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C146ACE72460108900D69E2B /* Build configuration list for PBXNativeTarget "testNanoLog_iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C146ACE82460108900D69E2B /* Debug */,
+				C146ACE92460108900D69E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C146ACEA2460108900D69E2B /* Build configuration list for PBXNativeTarget "testNanoLog_iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C146ACEB2460108900D69E2B /* Debug */,
+				C146ACEC2460108900D69E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C146ACAD2460107C00D69E2B /* Project object */;
+}

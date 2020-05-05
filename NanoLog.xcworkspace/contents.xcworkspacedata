@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:testtmp/testtmp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:testNanoLog_ios/testNanoLog_ios.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:decompressNanoLog/decompressNanoLog.xcodeproj">
    </FileRef>
    <FileRef

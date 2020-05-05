@@ -71,7 +71,17 @@ RuntimeLogger::RuntimeLogger()
     for (size_t i = 0; i < Util::arraySize(stagingBufferPeekDist); ++i)
         stagingBufferPeekDist[i] = 0;
 
+#if !defined(TARGET_OS_IPHONE)
     const char *filename = NanoLogConfig::DEFAULT_LOG_FILE;
+#else
+    #define FILENAME_MAX_LENGTH (300)
+    extern char g_fileNamePrefix[];
+    void InitFileMmapEnv(void);
+    InitFileMmapEnv();
+    char filename[FILENAME_MAX_LENGTH] = {0};
+    snprintf(filename,FILENAME_MAX_LENGTH,"%s/%s",g_fileNamePrefix,"compressedLog");
+#endif
+    
     outputFd = open(filename, NanoLogConfig::FILE_PARAMS, 0666);
     if (outputFd < 0) {
         fprintf(stderr, "NanoLog could not open the default file location "
@@ -620,9 +630,31 @@ RuntimeLogger::compressionThreadMain() {
     cyclesActive += PerfUtils::Cycles::rdtsc() - cyclesAwakeStart;
 }
 
+static bool s_isInited_fileMmap = false;
+#define FILENAME_MAX_LENGTH 512
+char g_fileNamePrefix[FILENAME_MAX_LENGTH];
+
+void InitFileMmapEnv(void)
+{
+               
+   if (!s_isInited_fileMmap)
+   {
+       char *home = getenv("HOME");
+       snprintf(g_fileNamePrefix,FILENAME_MAX_LENGTH,"%s/%s",home+strlen("/private"),"tmp");
+       s_isInited_fileMmap = true;
+   }
+}
+
 // Documentation in NanoLog.h
 void
-RuntimeLogger::setLogFile_internal(const char *filename) {
+RuntimeLogger::setLogFile_internal(const char *filename_) {
+#if !defined(TARGET_OS_IPHONE)
+    const char * filename = filename_;
+#else
+    InitFileMmapEnv();
+    char filename[FILENAME_MAX_LENGTH] = {0};
+    snprintf(filename,FILENAME_MAX_LENGTH,"%s/%s",g_fileNamePrefix,filename_);
+#endif
     // Check if it exists and is readable/writeable
     if (access(filename, F_OK) == 0 && access(filename, R_OK | W_OK) != 0) {
         std::string err = "Unable to read/write from new log file: ";

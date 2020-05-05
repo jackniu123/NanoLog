@@ -63,9 +63,13 @@ static
 uint64_t FORCE_INLINE
 rdpmc(int ecx)
 {
+#ifdef TARGET_OS_IPHONE
+    return 0;
+#else
     unsigned int a, d;
     __asm __volatile("rdpmc" : "=a"(a), "=d"(d) : "c"(ecx));
     return ((uint64_t)a) | (((uint64_t)d) << 32);
+#endif
 }
 
 /**
@@ -138,10 +142,14 @@ void pinThreadToCore(int id) {
  */
 static FORCE_INLINE
 void serialize() {
+#if defined(TARGET_OS_IPHONE)
+    return;
+#else
     uint32_t eax, ebx, ecx, edx;
     __asm volatile("cpuid"
         : "=a" (eax), "=b" (ebx), "=c" (ecx), "=d" (edx)
         : "a" (1U));
+#endif
 }
 
 

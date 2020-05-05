@@ -19,7 +19,10 @@
 #include <string>
 #include <vector>
 #include <mutex>
+#ifdef TARGET_OS_IPHONE
+#else
 #include <xmmintrin.h>
+#endif
 
 #include "Atomic.h"
 #include "Cycles.h"

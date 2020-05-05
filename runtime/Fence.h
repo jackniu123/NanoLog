@@ -35,7 +35,11 @@ class Fence {
      */
     static void inline lfence()
     {
+    #ifdef TARGET_OS_IPHONE
+        return;
+    #else
         __asm__ __volatile__("lfence" ::: "memory");
+    #endif
     }
 
     /**
@@ -46,7 +50,11 @@ class Fence {
      */
     static void inline sfence()
     {
+    #ifdef TARGET_OS_IPHONE
+        return;
+    #else
         __asm__ __volatile__("sfence" ::: "memory");
+    #endif
     }
 
     /**

@@ -30,7 +30,7 @@ void runBenchmark();
 // using the NanoLog namespace (i.e. NanoLog::DEBUG).
 using namespace NanoLog::LogLevels;
 
-int main(int argc, char** argv) {
+extern "C" int __sub_main_(int argc, char** argv) {
     // Optional: Set the output location for the NanoLog system. By default
     // the log will be output to ./compressedLog
     NanoLog::setLogFile("./logFile");
@@ -77,6 +77,7 @@ int main(int argc, char** argv) {
 
     // Optional: Prints NanoLog configuration parameters
     NanoLog::printConfig();
+    return 0;
 }
 
 void runBenchmark() {

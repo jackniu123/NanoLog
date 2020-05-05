@@ -41,6 +41,9 @@ static Initialize _(Cycles::init);
  */
 void
 Cycles::init() {
+#ifdef TARGET_OS_IPHONE
+    return;
+#endif
     if (cyclesPerSec != 0)
         return;
 
